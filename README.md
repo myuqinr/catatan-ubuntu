@@ -1,0 +1,1 @@
+Catatan dalam belajar Ubuntu
