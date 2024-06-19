@@ -1,0 +1,73 @@
+# / (root)
+Direktori utama dari sistem Ubuntu, direktori ini merupakan titik awal dari seluruh struktur direktori di sistem Linux/Ubuntu. Semua file dan direktori di sistem berada di bawah direkori ini. Pengguna biasa dan superuser bisa mengakses direktori ini, namun hanya superuser yang dapat mengubah file sistem dan menginstall perangkat lunak di direktori ini.
+
+# /root
+Berbeda dengan /, direktori /root merupakan sub direktori dari direktori /. Direktori ini adalah rumah/home untuk pengguna root atau superuser. Superuser direktori home nya adalah /root, user biasa direktori home nya adalah /home/<USERNAME>.
+
+# /home
+Diektori /home ini adalah rumah untuk setiap pengguna biasa(non-superuser). Setiap pengguna yang dibuat di sistem akan memiliki direktorinya sendiri. Misal user ifan akan memiliki direktori /home/ifan, dan user ilham akan memiliki direktori /home/ilham, dan setiap user tidak bisa mengakses direktori user lain, kecuali dengan izin khusus. Biasanya direktori ini (home/<username>) digunakan untuk menyimpan file pribadi seorang user, seperti dokumen, gambar, video, DLL.
+
+# /bin (binary)
+Folder ini menyimpan berbagai program dan PERINTAH DASAR yang diperlukan untuk menjalankan dan memelihara sistem. Jadi perintah/command yang digunakan oleh user biasa atau superuser disimpan di direktori /bin ini. Jadi intinya, direktori ini digunakan untuk MENYIMPAN PERINTAH-PERINTAH DASAR yang bisa digunakan oleh USER BIASA dan SUPERUSER.
+
+# /sbin
+Program-program yang ada di direktori /sbin ini mirip dengan yang ada di direktori /bin, tetapi perintah-perintah di direktori /sbin ini KHUSUS untuk pengguna dengan hak akses root atau superuser. Program-program disini mencangkup alat/tools untuk mengelola sistem file, jaringan, dan perangkat keras. Pengguna biasa tidak memiliki akses ke direktori ini, karena program-program didalamnya memiliki potensi untuk mengubah konfigurasi sistem yang dapat berdampak besar.
+
+# /boot
+Direktori ini berisi file-file yang dibutuhkan saat komputer kita mulai menyala, termasuk Kernel Linux (inti sistem operasi) dan konfigurasi untuk memulai sistem operasi(OS). Selain Kernel, terdapat juga GRUB (Grand Unified Bootloader) yang digunakan untuk mengatur proses booting dan memilih sistem operasi(OS) yang akan dimuat saat komputer dinyalakan.
+
+# /dev (devices)
+Direktori ini berisi file-file yang mewakili/merepresentasikan perangkat fisik dan virtual pada komputer kita, seperti hard disk, mouse, dan keyboard. Ini memungkinkan perangkat lunak untuk berkomunikasi dengan perangkat keras. Jadi intinya, file-file didalam direktori ini menyediakan antarmuka ke perangkat keras dan ke perangkat lunak Kernel, memungkinkan program untuk berinteraksi langsung dengan perangkat fisik dan virtual.
+
+# /etc
+Direktori ini menyimpan program, konfigurasi sistem dan aplikasi. Misalnya, program untuk mengatur koneksi internet atau konfigurasi untuk memulai program tertentu saat komputer anda menyala. Nama 'etc' berasal dari 'et cetera' yang mencerminkan fakta bahwa direktori ini awalnya dimaksudkan untuk menyimpan berbagai file konfigurasi yang tidak memiliki tempat khusus. Seiring waktu, direktori /etc telah menjadi lokasi utama untuk file konfigurasi yang penting karena mereka menentukan bagaimana sistem dan aplikasi berperilaku.
+
+# /lib dan /lib64 (library)
+Direktori ini adalah tempat dimana library/pustaka yang dibutuhkan oleh program-program yang berjalan di sistem disimpan. Library-library yang disimpan menyediakan fungsi-fungsi yang dibutuhkan oleh program, sehingga program-program tidak perlu menulis ulang kode untuk fungsi-fungsi tersebut, menghemat waktu dan upaya pengembangan.
+
+# /media dan /mnt (mount)
+Direktori ini digunakan untuk me-mount(memasang) perangkat penyimpanan atau sistem file tambahan. Jika kita memasang USB Drive atau media penyimpanan eksternal lainnya, media eksternal tersebut akan berada pada direktori /media atau /mnt (disalahsatunya). Direktori /media dan /mnt itu fungsinya sama yaitu untuk me-mount media penyimpanan eksternal. Namun biasanya /media digunakan untuk me-mount media penyimpanan eksternal sementara yang akan dilepas secara berkala, sementara /mnt untuk media penyimpanan permanen.
+Istilah `me-mount` adalah proses menghubungkan perangkat penyimpanan atau sistem file tambahan ke dalam struktur direktori sistem agar dapat diakses oleh sistem operasi(OS). jadi, pada saat kita menghubungkan USB Drive eksternal ke komputer kita, itu juga disebut me-mount, untuk mengakses data didalamnya.
+
+# /opt (optional/opsional)
+Direktori ini digunakan untuk menginstall perangkat lunak tambahan yang tidak termasuk ke dalam paket standar sistem. Direktori ini adalah tempat untuk menampung aplikasi pihak ketiga atau paket perangkat lunak yang tidak dikelola oleh manajer paket sistem. Ini membantu menjaga organisasi, isolasi, dan keamanan perangkat lunak yang diinstall di sistem operasi(OS). Dengan menggunakan /opt, perangkat lunak tambahan tersebut tidak akan bercampur dengan perangkat lunak sistem inti, sehingga memudahkan pengelolaan dan pemeliharaan sistem.
+
+# /proc (process)
+Direktori ini adalah direktori khusus yang berfungsi sebagai antarmuka ke dalam informasi proses sistem dan parameter Kernel. Jadi simplenya, berisi informasi tentang proses yang berjalan di sistem Linux.
+
+# /run
+Direktori ini berisi file-file yang berubah saat sistem sedang berjalan, seperti informasi tentang proses yang sedang berjalan.
+
+# /srv (services)
+Direktori ini berisi data untuk layanan(services) yang dijalankan di sistem, misalnya data untuk server web. Direktori ini dirancang untuk menyimpan data yang disajikan oleh sistem. Salah satu penggunaan umum adalah untuk menyimpan data situs web yang diakses melalui server web.
+
+# /sys (system)
+Direktori ini adalah sebuah virtual file system yang menyediakan informasi tentang perangkat keras yang terpasang dan dikonfigurasi pada sistem. Direktori ini tidak menyimpan file fisik di disk, melainkan menyajikan informasi tentang perangkat keras dalam bentuk file dan direktori virtual. Perangkat keras yang terbaca oleh kernel akan direpresentasikan sebagai file atau direktori di /sys. Penggunaan utama dari /sys adalah untuk memonitor dan mengontrol konfigurasi perangkat keras melalui antarmuka(interface) yang disediakan oleh Kernel. Direktori /sys sangat penting untuk pengelolaan perangkat keras dan pemecahan masalah di lingkungan(environment) Linux, karena menyediakan akses langsung ke informasi yang terkait dengan perangkat keras.
+
+# /tmp (temporary)
+File-file sementara(temporary) disimpan di direktori ini, file-file yang ada di direktori /tmp ini biasanya akan dihapus saat kita me-restart komputer kita.
+
+# /usr (user)
+Direktori ini adalah direktori utama yang berisi berbagai program dan file yang digunakan oleh pengguna(user) dan aplikasi, lebih tepatnya direktori ini digunakan untuk menyimpan aplikasi dan data yang digunakan  oleh semua pengguna(user) di sistem. Rata-rata setelah kita menginstall suatu tools, maka tools tersebut akan masuk ke dalam salahsatu subdirektori dibawah /usr
+SUBDIREKTORI /usr :
+## /usr/bin
+Direktori ini berfungsi untuk menyimpan program eksekusi(binary) atau menyimpan perintah yang bisa dijalankan oleh user biasa dan superuser.
+## usr/sbin
+Direktori ini berisi perintah-perintah yang hanya bisa dijalankan oleh pengguna root atau superuser.
+## /usr/lib
+Menyimpan pustaka/library yang dibutuhkan oleh program yang terdapat di direktori /usr/bin dan /usr/sbin
+## /usr/include
+Digunakan untuk menyimpan file-file header untuk bahasa pemrograman C dan C++ yang digunakan untuk pengembangan perangkat lunak.
+## /usr/share
+Digunakan untuk menyimpan data yang tidak bergantung pada arsitektur komputer, seperti dokumentasi, icon , dan halaman manual.
+## /usr/local
+Menyimpan data dan program yang diinstall secara lokal oleh administrator/superuser, terpisah dari yang dikelola oleh sistem distribusi.
+## /usr/src
+Digunakan untuk menyimpan kode sumber(source code) untuk Kernel Linux dan modul lainnya
+## /usr/games
+Berfungsi menyimpan binari untuk permainan(game)
+## /usr/libexec
+Menyimpan program kecil yang tidak dipanggil langsung oleh pengguna tetapi oleh program lain.
+
+# /var
+Direktori ini berisi data yang berubah secara teratur saat sistem berjalan, seperti file log, file sementara(temporary), dan data lain yang berkaitan dengan aktivitas sistem.
